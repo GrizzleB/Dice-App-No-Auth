@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<form method="post">
+
+    @{
+        if (ViewBag.Dice != null)
+        {
+            foreach (int die in ViewBag.Dice)
+            {
+                switch (die)
+                {
+                    case 1: @:<img src="/Resources/Die1.bmp" />
+                        break;
+
+                    case 2: @:<img src="/Resources/Die2.bmp" />
+                        break;
+
+                    case 3: @:<img src="/Resources/Die3.bmp" />
+                        break;
+
+                    case 4: @:<img src="/Resources/Die4.bmp" />
+                        break;
+
+                    case 5: @:<img src="/Resources/Die5.bmp" />
+                        break;
+
+                    case 6: @:<img src="/Resources/Die6.bmp" />
+                        break;
+
+                    default: break;
+                }
+            }
+        }
+    }
+
+    <div>
+        <input value="Roll" type="submit" />
+        <input value="Clear" type="submit" formmethod="get" />
+    </div>
+
+</form>
+
+
